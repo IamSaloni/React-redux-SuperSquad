@@ -6,7 +6,7 @@ class HeroList extends Component {
     render() {
         return (
             <div>
-                <h4 className="hea">Your Hero Squad</h4>
+                <h4>Your Hero Squad</h4>
                 <ul className="list-group">
                     {
                         this.props.heroes.map(hero => {
