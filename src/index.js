@@ -7,7 +7,9 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import { addCharacterById } from './actions';
 
-const store = createStore(rootReducer);
+const store = createStore(
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 console.log('state',store.getState());
 store.subscribe(() => console.log('store', store.getState()));
 store.dispatch(addCharacterById(2));
